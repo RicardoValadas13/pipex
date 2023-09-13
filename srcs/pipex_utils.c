@@ -5,6 +5,22 @@
 #include <fcntl.h>
 char*  ft_store_path(char **envp, char *cmd)
 {
+  char* path;
+
+  path = NULL;
+  while(envp)
+  {
+    if (ft_strncmp("PATH=",*envp,6))
+    {
+      path = (*envp) + 6;
+      break ;
+    }
+    envp++;
+  }
+  char **paths = ft_split(path, ':');
+
+  
+  return (path);
 }
 void  ft_check_args(char **args, char **envp)
 {

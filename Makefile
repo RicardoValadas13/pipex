@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+         #
+#    By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 11:09:56 by ricardovala       #+#    #+#              #
-#    Updated: 2023/08/08 11:09:57 by ricardovala      ###   ########.fr        #
+#    Updated: 2023/09/14 10:49:12 by rbenjami         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = pipex
 
 SRCS =	./srcs/pipex.c \
-		./srcs/errmsg.c
+		./srcs/pipex_utils.c
 
 LIBFT_DIR = ./srcs/libft/
 LIBFT = $(LIBFT_DIR)/libft.a
@@ -33,13 +33,12 @@ $(NAME): $(LIBFT) $(OBJS)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(LIBFT):
-	@$(MAKE) -C ./srcs/libft --no-print-directory --silent
-
+	@$(MAKE) -C ./srcs/libft 
 tester: $(SRCS)
 	@$(CC) $(CFLAGS) $(SRCS)
 
 clean_library:
-	@$(MAKE) -C ./srcs/libft fclean --no-print-directory --silent
+	@$(MAKE) -C ./srcs/libft fclean 
 
 clean:
 	@rm -f $(OBJS)
@@ -50,4 +49,4 @@ fclean: clean clean_library
 
 re: fclean all
 
-.PHONY: all tester bonus clean fclean runner re
+.PHONY: all tester clean fclean re

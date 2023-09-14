@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
+/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 10:24:26 by rbenjamim         #+#    #+#             */
-/*   Updated: 2023/08/08 11:21:04 by ricardovala      ###   ########.fr       */
+/*   Updated: 2023/09/14 12:50:02 by rbenjami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,11 @@ static char	*ft_string(char const *s, char *new_s, char c)
 	new_s[i] = '\0';
 	return (new_s);
 }
-//It splits a string (*s) by a defined delimiter (c)
+/**
+ * @brief It splits a string (*s) by a defined delimiter (c)
+ * 
+ **/
+
 char	**ft_split(char const *s, char c)
 {
 	char	**new_s;

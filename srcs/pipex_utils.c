@@ -45,9 +45,14 @@ void  ft_check_args(char **args, char **envp)
 
   pipex.path = ft_store_path(envp); 
   pipex.parse_paths = ft_split(pipex.path, ':');
-  pipex.parse_args[0] = ft_parse_args(pipex.parse_paths, args[2]); 
-  pipex.parse_args[1] = ft_parse_args(pipex.parse_paths, args[3]);
+  pipex.parse_args = ft_parse_args(pipex.parse_paths, args[2]); 
+  pipex.parse_args = ft_parse_args(pipex.parse_paths, args[3]);
+  
   printf("%s", pipex.parse_args[0]);
+  while(pipex.parse_args[i])
+    free (pipex.parse_args[i++]);  
+  free(pipex.parse_args);
+  i = 0; 
   while(pipex.parse_paths[i])
     free (pipex.parse_paths[i++]);  
   free(pipex.parse_paths);

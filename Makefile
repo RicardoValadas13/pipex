@@ -3,18 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+         #
+#    By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 11:09:56 by ricardovala       #+#    #+#              #
-#    Updated: 2023/09/14 10:49:12 by rbenjami         ###   ########.fr        #
+#    Updated: 2023/09/20 16:19:31 by ricardovala      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = pipex
 
 SRCS =	./srcs/pipex.c \
-		./srcs/pipex_utils.c
-
+		./srcs/childs.c \ 
+		./srcs/parsing.c
+		
 LIBFT_DIR = ./srcs/libft/
 LIBFT = $(LIBFT_DIR)/libft.a
 

@@ -3,15 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:23:48 by rbenjami          #+#    #+#             */
-/*   Updated: 2023/04/20 12:29:28 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/09/19 14:48:56 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * @brief This function converts a char into an int, and returns it
+ * @param nptr The number to convert in int
+*/
 int	ft_atoi(char const *nptr)
 {
 	int	signal;
@@ -38,9 +42,3 @@ int	ft_atoi(char const *nptr)
 	}
 	return (nbr * signal);
 }
-
-/* #include <stdio.h>
-int	main(void)
-{
-	printf("Result: %d\n",ft_atoi("\t 10"));
-} */

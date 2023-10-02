@@ -22,32 +22,19 @@ char*  ft_store_path(char **envp)
  * @param args The command to find the path for 
  * @returns The path of the given command
 */
-char*  ft_parse_args(char **paths, char *args)
+char*  ft_get_cmd(char **paths, char *args)
 {
     char *tmp;
-    char *tmp1;
+    char *cmd;
     while (*paths)
     {
         tmp = ft_strjoin(*paths, "/");
-        tmp1 = ft_strjoin(tmp, args);
+        cmd = ft_strjoin(tmp, args);
         free(tmp);
-        if (access(tmp1, X_OK | F_OK) == -1)    
-        return (tmp1); 
-        free(tmp1);
+        if (access(cmd, X_OK | F_OK) == 0)    
+            return (cmd); 
+        free(cmd);
         paths++;
     }
     return (NULL) ;
-}
-/**
- * @brief This function stores in cmd1 and cmd2 the paths of each command
-*/
-void  ft_parse_cmds(t_pipex pipex, char **args)
-{
-    pipex.cmd1 = ft_parse_args(pipex.parse_paths, args[2]);
-    pipex.cmd2 = ft_parse_args(pipex.parse_paths, args[3]);
-    if (pipex.cmd1 != NULL || pipex.cmd2 != NULL)
-    {
-        //Dont forget to try and put here an exit or something of a kind
-        return ;
-    }
 }

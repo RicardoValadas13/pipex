@@ -6,14 +6,14 @@
 #    By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 11:09:56 by ricardovala       #+#    #+#              #
-#    Updated: 2023/09/20 16:19:31 by ricardovala      ###   ########.fr        #
+#    Updated: 2023/09/25 16:54:02 by ricardovala      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = pipex
 
 SRCS =	./srcs/pipex.c \
-		./srcs/childs.c \ 
+		./srcs/childs.c \
 		./srcs/parsing.c
 		
 LIBFT_DIR = ./srcs/libft/

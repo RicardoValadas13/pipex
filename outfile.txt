@@ -1,0 +1,7 @@
+-rw-r--r--   1 ricardovaladas  staff     1557  3 Out 11:08 Makefile
+-rw-r--r--@  1 ricardovaladas  staff  1325886 22 Jul 10:55 en.subject.pdf
+drwxr-xr-x   3 ricardovaladas  staff       96 15 Set 15:24 inc
+-rw-r--r--   1 ricardovaladas  staff       25  3 Out 11:12 infile.txt
+-rw-r--r--   1 ricardovaladas  staff        0  3 Out 11:13 outfile.txt
+-rwxr-xr-x   1 ricardovaladas  staff    56098  3 Out 11:11 pipex
+drwxr-xr-x  14 ricardovaladas  staff      448  3 Out 11:11 srcs

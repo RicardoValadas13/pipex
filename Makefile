@@ -6,7 +6,7 @@
 #    By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/08 11:09:56 by ricardovala       #+#    #+#              #
-#    Updated: 2023/09/25 16:54:02 by ricardovala      ###   ########.fr        #
+#    Updated: 2023/10/03 11:08:57 by ricardovala      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME = pipex
 
 SRCS =	./srcs/pipex.c \
 		./srcs/childs.c \
-		./srcs/parsing.c
+		./srcs/parsing.c \
+		./srcs/clean.c \
+		./srcs/msg.c
 		
 LIBFT_DIR = ./srcs/libft/
 LIBFT = $(LIBFT_DIR)/libft.a

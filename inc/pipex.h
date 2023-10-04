@@ -3,26 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
+/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/08 11:12:42 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/03 11:08:24 by ricardovala      ###   ########.fr       */
+/*   Updated: 2023/10/04 12:32:08 by rbenjami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PIPEX_H
 # define PIPEX_H
 
-# include "../srcs/libft/libft.h"
+# include <libft.h>
 # include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <sys/wait.h>
+
 typedef struct s_pipex
 {
 	int		infile;
 	int		outfile;
 	int		fd[2];
+	int		dup_fd[2];
 	char	*path;
 	char	**parse_paths;
 	char	**parse_args;
@@ -30,6 +33,8 @@ typedef struct s_pipex
 	char	**cmd_args;
 	int		pid1;
 	int		pid2;
+	char	*infile_param;
+	char	*outfile_param;
 
 }			t_pipex;
 
@@ -46,6 +51,6 @@ void		second_child(t_pipex pipex, char **args, char **envp);
 
 int			error_msg(char *err);
 int			msg(char *err);
-void		closepipes(t_pipex *pipex);
+void		closepipes(int *fds);
 
 #endif

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   clean.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
+/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:02:37 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/03 11:03:33 by ricardovala      ###   ########.fr       */
+/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../inc/pipex.h"
-#include "../srcs/libft/libft.h"
+#include <pipex.h>
 
 /**
  * @brief This function cleans all the alocated memory from a certain array
@@ -22,12 +21,8 @@ void	free_parent(t_pipex *pipex)
 	int	i;
 
 	i = 0;
-	while (pipex->parse_paths[i])
-	{
-		free(pipex->parse_paths[i]);
-		i++;
-	}
-	free(pipex->parse_paths);
+	close(pipex->outfile);
+	close(pipex->infile);
 }
 /**
 
@@ -39,17 +34,24 @@ void	free_childs(t_pipex *pipex)
 	int	i;
 
 	i = 0;
-	while (pipex->cmd_args[i])
+	while (pipex->cmd_args && pipex->cmd_args[i])
 	{
 		free(pipex->cmd_args[i]);
 		i++;
 	}
 	free(pipex->cmd_args);
 	free(pipex->cmd);
+	i = 0;
+	while (pipex->parse_paths && pipex->parse_paths[i])
+	{
+		free(pipex->parse_paths[i]);
+		i++;
+	}
+	free(pipex->parse_paths);
 }
 
-void	closepipes(t_pipex *pipex)
+void	closepipes(int *fd)
 {
-	close(pipex->fd[0]);
-	close(pipex->fd[1]);
+	close(fd[0]);
+	close(fd[1]);
 }

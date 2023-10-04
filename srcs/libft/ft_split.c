@@ -6,7 +6,7 @@
 /*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 10:24:26 by rbenjamim         #+#    #+#             */
-/*   Updated: 2023/09/14 12:50:02 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/04 12:25:22 by rbenjami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_mem(char const *s, char c)
 
 	i = 0;
 	j = 0;
-	while (*s)
+	while (s && *s)
 	{
 		if (*s != c && j == 0)
 		{
@@ -62,7 +62,7 @@ char	**ft_split(char const *s, char c)
 
 	new_s = (char **)malloc((ft_mem(s, c) + 1) * sizeof(char *));
 	if (!new_s || !s)
-		return (NULL);
+		return (free(new_s), NULL);
 	i = 0;
 	j = 0;
 	while (s[i])

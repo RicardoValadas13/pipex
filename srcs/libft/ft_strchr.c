@@ -6,7 +6,7 @@
 /*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/14 11:24:19 by rbenjami          #+#    #+#             */
-/*   Updated: 2023/04/20 12:31:23 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/04 12:30:11 by rbenjami         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_strchr(const char *s, int c)
 	unsigned char	d;
 
 	d = c;
-	while (*s)
+	while (s && *s)
 	{
 		if (*s == d)
 			return ((char *)s);
 		s++;
 	}
-	if (*s == d)
+	if (s && *s == d)
 		return ((char *)s);
 	return (NULL);
 }

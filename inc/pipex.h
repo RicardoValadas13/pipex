@@ -49,7 +49,7 @@ void		free_parent(t_pipex *pipex);
 void		first_child(t_pipex pipex, char **args, char **envp);
 void		second_child(t_pipex pipex, char **args, char **envp);
 
-int			error_msg(char *err);
+void		error_msg(char *err);
 int			msg(char *err);
 void		closepipes(int *fds);
 

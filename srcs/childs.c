@@ -37,7 +37,8 @@ void	first_child(t_pipex pipex, char **args, char **envp)
 	{
 		closepipes(pipex.dup_fd);
 		free_childs(&pipex);
-		exit(msg("Command not found\n"));
+		msg("Command not found\n");
+		exit(1);
 	}
 	execve(pipex.cmd, pipex.cmd_args, envp);
 	closepipes(pipex.dup_fd);
@@ -70,10 +71,11 @@ void	second_child(t_pipex pipex, char **args, char **envp)
 	{
 		closepipes(pipex.dup_fd);
 		free_childs(&pipex);
-		exit(msg("Command not found\n"));
+		msg("Command not found\n");
+		exit(1);
 	}
 	execve(pipex.cmd, pipex.cmd_args, envp);
 	closepipes(pipex.dup_fd);
 	free_childs(&pipex);
-	error_msg("execve");
+	error_msg("excve");
 }

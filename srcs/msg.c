@@ -16,7 +16,7 @@
  * @brief This function writes the err (2) the error msg
  * @param err The msg to be written
  */
-int	error_msg(char *err)
+void	error_msg(char *err)
 {
 	perror(err);
 	exit(1);

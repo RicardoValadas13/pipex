@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pipex.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:00:54 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/10 18:30:51 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

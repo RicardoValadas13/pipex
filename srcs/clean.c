@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   clean.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:02:37 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:12:42 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,14 @@
  */
 void	free_parent(t_pipex *pipex)
 {
-	int	i;
-
-	i = 0;
 	close(pipex->outfile);
 	close(pipex->infile);
 }
+
 /**
 
-	*  @brief This function serves the purpose to free the alocated memory in the child processes
+	*  @brief This function serves the purpose to 
+	free the alocated memory in the child processes
  * @param pipex A pointer to the structure where the memory was allocated
  */
 void	free_childs(t_pipex *pipex)

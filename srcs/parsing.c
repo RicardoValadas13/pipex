@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:00:47 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:11:09 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ char	*ft_store_path(char **envp)
 	}
 	return (NULL);
 }
+
 /**
  * @brief This function does the parsing of the path in envp
  * @param paths The array of the path found in the envp
@@ -35,8 +36,9 @@ char	*ft_store_path(char **envp)
  */
 char	*ft_get_cmd(char **paths, char *args)
 {
-	char *tmp;
-	char *cmd;
+	char	*tmp;
+	char	*cmd;
+
 	if (!paths)
 		return (NULL);
 	if (ft_strchr(args, '/') != NULL)

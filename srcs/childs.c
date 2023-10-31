@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   childs.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:00:37 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:12:19 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <pipex.h>
 
-
 /**
 
-	* @brief This function handles the beggining part of the pipe where the first command happens
+	* @brief This function handles the beggining part 
+	of the pipe where the first command happens
  * @param pipex The struct where evrythig is stored
  * @param args The arguments given in the terminal
  * @param envp The enviroment variables array
@@ -44,9 +44,11 @@ void	first_child(t_pipex pipex, char **args, char **envp)
 	free_childs(&pipex);
 	error_msg("execve");
 }
+
 /**
 
-	* @brief This function handles the end part of the pipe where the second command happens
+	* @brief This function handles the end part of 
+	the pipe where the second command happens
  * @param pipex The struct where evrythig is stored
  * @param args The arguments given in the terminal
  * @param envp The enviroment variables array

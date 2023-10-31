@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   msg.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rbenjami <rbenjami@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ricardovaladas <ricardovaladas@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:09:14 by ricardovala       #+#    #+#             */
-/*   Updated: 2023/10/04 12:31:18 by rbenjami         ###   ########.fr       */
+/*   Updated: 2023/10/31 14:11:28 by ricardovala      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
